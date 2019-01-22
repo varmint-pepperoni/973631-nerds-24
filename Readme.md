@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
-* Студент: [Ирина Вахрушева](https://up.htmlacademy.ru/htmlcss/24/user/973631).
-* Наставник: `Неизвестно`.
+* Студент: [Ирина Вахрушева](https://htmlacademy.ru/profile/id973631).
+* Наставник: [Артём Рудов](https://htmlacademy.ru/profile/artrudov).
 
 ---
 
