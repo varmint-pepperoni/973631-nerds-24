@@ -5,8 +5,54 @@
     <title>HTML Academy: Нёрдс</title>
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
-
+    <header class="main-header">
+      <nav class="main-navigation">
+        <!-- Лично мне больше нравится, когда при нажатии на лого на главной, страница перезагружается. -->
+        <a class="main-header-logo" href="index.html"><img src="img/logo.svg" alt="Логотип интернет-магазина «Нёрдс»" width="100" height="100"></a>
+      </nav>
+      <ul class="site-navigation">
+        <li class="site-navigation__item"><a href="studio.html">Студия</a></li>
+        <li class="site-navigation__item"><a href="clientele.html">Клиенты</a></li>
+        <li class="site-navigation__item"><a href="inner.html">Магазин</a></li>
+        <li class="site-navigation__item"><a href="contacts.html">Контакты</a></li>
+      </ul>
+      <ul class="user-navigation">
+        <li class="shop-basket"><a href="shop-basket.html">Корзина</a></li>
+      </ul>
+    </header>
+    <main class="container">
+      <h1 class="visually-hidden">Интернет-магазин «Нёрдс»</h1>
+      <section class="services">
+        <h2 class="visually-hidden">Услуги</h2>
+        <ul class="services__list">
+          <li class="services__item">
+            <h3>Веб-сайты</h3>
+            <p class="services__text">Мир никогда не будет прежним после того как увидит ваш сайт!</p>
+            <a href="order.html" class="services__button">Заказать</a>
+          </li>
+          <li class="services__item">
+            <h3>Приложения</h3>
+            <p class="services__text">Покорите топ-10 приложений в AppStore и Google Play</p>
+            <a href="order.html" class="services__button">Заказать</a>
+          </li>
+          <li class="services__item">
+            <h3>Презентации</h3>
+            <p class="services__text">Вы даже не подозреваете, насколько вы изумительны!</p>
+            <a href="order.html" class="services__button">Заказать</a>
+          </li>
+      </ul>
+      </section>
+    </main>
+    <footer class="main-footer">
+      <ul class="social-list">
+        <li class="social-list__item"><a href="https://vk.com/nerds" class="social-list__button">Вконтакте</a></li>
+        <li class="social-list__item"><a href="https://facebook.com/nerds" class="social-list__button">Фэйсбук</a></li>
+        <li class="social-list__item"><a href="https://instagram.com/nerds" class="social-list__button">Инстаграм</a></li>
+      </ul>
+      <p class="main-footer__sale">
+        <b class="main-footer__sale-title">Давайте дружить, это выгодно!</b>
+        <span class="main-footer__sale-text">Скидка 10% для друзей из социальных сетей.</span>
+      </p>
+    </footer>
   </body>
 </html>
