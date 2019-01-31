@@ -8,7 +8,7 @@
     <header class="main-header">
       <nav class="main-navigation">
         <!-- Лично мне больше нравится, когда при нажатии на лого на главной, страница перезагружается. -->
-        <a class="main-logo" href="index.html"><img src="img/logo.svg" alt="Логотип интернет-магазина «Нёрдс»" width="100" height="100"></a>
+        <a class="main-logo" href="index.html"><img src="img/logo.svg" alt="Логотип интернет-магазина «Нёрдс»" width="160" height="65"></a>
         <ul class="main-navigation__list">
           <li class="main-navigation__item"><a class="main-navigation__link" href="studio.html">Студия</a></li>
           <li class="main-navigation__item"><a class="main-navigation__link" href="clientele.html">Клиенты</a></li>
@@ -40,6 +40,57 @@
           </li>
       </ul>
       </section>
+      <section class="about-us">
+        <p class="about-us__slogan">Мы — маленькая, но гордая дизайн-студия из Краснодара.</p>
+        <p class="about-us__mission">Исповедуем принципы минимализма и чистоты. Ставим математический расчет
+            превыше креатива. Работаем не покладая рук, как роботы.</p>
+        <!-- Мне кажется, для нижнего <p> и списка нужен свой общий блок -->
+        <p class="about-us__services-desc">Выполняем заказы на разработку:</p>
+        <ul class="about-us__services-list">
+          <li class="about-us__services-item">Веб-сайтов любой сложности</li>
+          <li class="about-us__services-item">Мобильных приложений для iOS и Android</li>
+          <li class="about-us__services-item">Слайдшоу и видео для корпоративных презентаций</li>
+        </ul>
+      </section>
+      <section class="statistic">
+        <img src="img/logo-color.jpg" width="360" height="208" alt="Цветной логотип интернет-магазина «Нёрдс»" class="logo-two">
+        <p class="statistic__title">с 2004 года Любим точность во всем:</p>
+        <ul class="statistic__list">
+          <li class="statistic__item">
+            <span class="statistic__mumber">146</span><span class="statistic__percent">%</span>
+            <span class="statistic__number-desc">Уровень самоотдачи</span>
+          </li>
+          <li class="statistic__item">
+            <span class="statistic__number">100</span><span class="statistic__percent">%</span>
+            <span class="statistic__number-desc">Соблюдение сроков</span>
+          </li>
+          <li class="statistic__item">
+            <span class="statistic__number">50</span><span class="statistic__percent">%</span>
+            <span class="statistic__number-desc">Минимальная предоплата</span>
+          </li>
+        </ul>
+      </section>
+      <section class="partners">
+        <ul class="partners__list">
+          <li class="partners__item"><a class="partners__link"><img class="partners__logo" src="img/htmlacademy-logo.png" alt="Логотип сайта Html-Academy"></a></li>
+          <li class="partners__item"><a class="partners__link"><img class="partners__logo" src="img/borodinski-logo.png" alt="Логотип сайта барбершопа Бородинский"></a></li>
+          <li class="partners__item"><a class="partners__link"><img class="partners__logo" src="img/pinkup-logo.png" alt="Логотип Pink UP"></a></li>
+          <li class="partners__item"><a class="partners__link"><img class="partners__logo" src="img/mishka-logo.png" alt="Логотип сайта MISHKA"></a></li>
+        </ul>
+      </section>
+      <section class="map">
+        <img src="img/location.svg" alt="Картинка расположения на карте" class="location">
+        <div class="write-us">
+          <p class="write-us__title">NЁRDS DESIGN STUDIO</p>
+          <!-- Можно ли здесь потом стилизовать с помощью <white-space>? -->
+          <p class="write-us__contacts">
+            191186, Санкт-Петербург,<br>
+            ул. Б. Конюшенная, д. 19/8<br>
+              
+            тел. +7 (812) 275-75-75</p>
+            <a class="write-us__link" href="#">Напишите нам</a>
+        </div>
+      </section>
     </main>
     <footer class="main-footer">
       <ul class="social-list">
@@ -48,7 +99,8 @@
         <li class="social-list__item"><a href="https://instagram.com/nerds" class="social-list__link">Инстаграм</a></li>
       </ul>
       <p class="main-footer__sale">
-        Давайте дружить, это выгодно!
+        <!-- Считаю, что все-таки фразу "Давайте дружить.." нужно вложить в какой-то свой тег. Раз не стоит <b>, пусть будет strong-->
+        <strong class="main-footer__sale-title">Давайте дружить, это выгодно!</strong>
         <span class="main-footer__sale-text">Скидка 10% для друзей из социальных сетей.</span>
       </p>
     </footer>
