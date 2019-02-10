@@ -26,10 +26,9 @@
                         <article class="product">
                             <img class="product__img" src="img/sedona.jpg" width="360" height="576" alt="Макет информационного сайта для туристов «SEDONA»">
                             <div class="product__desc">
-<!-- В тз написано, что при нажатии появляется модальное окно. Поэтому здесь и далее я удалила href в <a> -->
-                                <a class="product__link"> 
-                                    <h3 class="product__desc-name">SEDONA</h3>
-                                </a>
+                                <h3 class="product__desc-name">
+                                    <a href="sedona.html" class="product__link">SEDONA</a>
+                                </h3>
                                 <p class="product__desc-text">Информационный сайт для туристов</p>
                                 <p class="product__desc-button">9 900 Руб.</p>
                             </div>
@@ -39,9 +38,9 @@
                         <article class="product">
                             <img class="product__img" src="img/pink-up.jpg" width="360" height="576" alt="Макет продуктового лендинга приложений для iOS и Android «PINK UP»">
                             <div class="product__desc">
-                                <a class="product__link">
-                                    <h3 class="catalog-item__desc-name">PINK UP</h3>
-                                </a>
+                                <h3 class="product__desc-name">
+                                    <a href="pink-up.html" class="product__link">PINK UP</a>
+                                </h3>
                                 <p class="product__desc-text">Продуктовый лендинг приложения для iOS и Android</p>
                                 <p class="product__desc-button">9 900 Руб.</p>
                             </div>
@@ -51,9 +50,9 @@
                         <article class="product">
                             <img class="product__img" src="img/barbershop.jpg" width="360" height="576" alt="Сайт салона красоты для мужчин «BARBERSHOP»">
                             <div class="product__desc">
-                                <a class="product__link">
-                                    <h3 class="catalog-item__desc-name">BARBERSHOP</h3>
-                                </a>
+                                <h3 class="product__desc-name">
+                                    <a href="barbershop.html" class="product__link">BARBERSHOP</a>
+                                </h3>
                                 <p class="product__desc-text">Сайт салона красоты. Для мужчин, да.</p>
                                 <p class="product__desc-button">9 900 Руб.</p>
                             </div>
@@ -63,9 +62,9 @@
                         <article class="product">
                             <img class="product__img" src="img/mishka.jpg" width="360" height="576" alt="Интернет-магазин вязаных игрушек «MISHKA»">
                             <div class="product__desc">
-                                <a class="product__link">
-                                    <h3 class="catalog-item__desc-name">MISHKA</h3>
-                                </a>
+                                <h3 class="product__desc-name">
+                                    <a href="mishka.html" class="product__link">MISHKA</a>
+                                </h3>
                                 <p class="product__desc-text">Интернет-магазин вязаных игрушек</p>
                                 <p class="product__desc-button">9 900 Руб.</p>
                             </div>
@@ -75,9 +74,9 @@
                         <article class="product">
                             <img class="product__img" src="img/a-plus.jpg" width="360" height="576" alt="Лендинг курсов повышения квалификации «A PLUS»">
                             <div class="product__desc">
-                                <a class="product__link">
-                                    <h3 class="catalog-item__desc-name">A PLUS</h3>
-                                </a>
+                                <h3 class="product__desc-name">
+                                    <a href="a-plus.html" class="product__link">A PLUS</a>
+                                </h3>
                                 <p class="product__desc-text">Лендинг курсов повышения квалификации</p>
                                 <p class="product__desc-button">9 900 Руб.</p>
                             </div>
@@ -87,9 +86,9 @@
                         <article class="product">
                             <img class="product__img" src="img/kvast.jpg" width="360" height="576" alt="Промо-сайт производителя крафтового кваса «КВАСТ»">
                             <div class="product__desc">
-                                <a href="" class="product__link">
-                                    <h3 class="catalog-item__desc-name">КВАСТ</h3>
-                                </a>
+                                <h3 class="product__desc-name">
+                                    <a href="kvast.html" class="product__link">КВАСТ</a>
+                                </h3>
                                 <p class="product__desc-text">Промо-сайт производителя крафтового кваса</p>
                                 <p class="product__desc-button">9 900 Руб.</p>
                             </div>
@@ -98,16 +97,17 @@
                 </ul>
             </section>
             <section class="map">
-                <img src="img/location.svg" alt="Картинка расположения на карте" class="location">
+                <img src="img/map.jpg" alt="Адрес компании: Санкт-Петербург, ул. Б. Конюшенная, д. 19/8" class="location" width="1440" height="416">
                 <div class="write-us">
-                    <p class="write-us__title">NЁRDS DESIGN STUDIO</p>
-                    <!-- Можно ли здесь потом стилизовать с помощью <white-space>? -->
-                    <p class="write-us__contacts">
-                    191186, Санкт-Петербург,<br>
-                    ул. Б. Конюшенная, д. 19/8<br>
-                          
-                    тел. +7 (812) 275-75-75</p>
-                    <a class="write-us__link" href="#">Напишите нам</a>
+                    <address class="write-us__address">
+                        <p class="write-us__title">NЁRDS DESIGN STUDIO</p>
+                        <p class="write-us__contacts">
+                            Санкт-Петербург,<br>
+                            ул. Б. Конюшенная, д. 19/8<br>
+                            <a href="tel:+78122757575">тел. +7 (812) 275-75-75</a>  
+                        </p>
+                    </address>
+                    <a class="write-us__link" href="">Напишите нам</a>
                 </div>
             </section>
         </main>

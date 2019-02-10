@@ -52,7 +52,8 @@
           <li class="about-us__services-item">Слайдшоу и видео для корпоративных презентаций</li>
         </ul>
       </section>
-      <section class="statistic">
+      <!-- От греха подальше пока оставлю -->
+      <!-- <section class="statistic">
         <img src="img/logo-color.jpg" width="360" height="208" alt="Цветной логотип интернет-магазина «Нёрдс»" class="logo-two">
         <p class="statistic__title">с 2004 года Любим точность во всем:</p>
         <ul class="statistic__list">
@@ -69,27 +70,44 @@
             <span class="statistic__number-desc">Минимальная предоплата</span>
           </li>
         </ul>
+      </section> -->
+      <section class="statistic">
+        <img src="img/logo-color.jpg" width="360" height="208" alt="Цветной логотип интернет-магазина «Нёрдс»" class="logo-two">
+        <table class="statistic__table">
+          <caption class="statistic__table-title">С 2004 года любим точность во всем:</caption>
+          <tr class="statistic__row">
+            <td class="statistic__cell">146<span class="statistic__percent">%</span></td>
+            <td class="statistic__cell">100<span class="statistic__percent">%</span></td>
+            <td class="statistic__cell">50<span class="statistic__percent">%</span></td>
+          </tr>
+          <tr class="statistic__table-row">
+            <th class="statistic__cell-head">Уровень самоотдачи</td>
+            <th class="statistic__cell-head">Соблюдение сроков</td>
+            <th class="statistic__cell-head">Минимальная предоплата</td>
+          </tr>
+        </table>
       </section>
       <section class="partners">
         <ul class="partners__list">
-          <li class="partners__item"><a class="partners__link"><img class="partners__logo" src="img/htmlacademy-logo.png" alt="Логотип сайта Html-Academy"></a></li>
-          <li class="partners__item"><a class="partners__link"><img class="partners__logo" src="img/borodinski-logo.png" alt="Логотип сайта барбершопа Бородинский"></a></li>
-          <li class="partners__item"><a class="partners__link"><img class="partners__logo" src="img/pinkup-logo.png" alt="Логотип Pink UP"></a></li>
-          <li class="partners__item"><a class="partners__link"><img class="partners__logo" src="img/mishka-logo.png" alt="Логотип сайта MISHKA"></a></li>
+          <li class="partners__item"><a href="https://htmlacademy.ru/intensive/htmlcss" class="partners__link"><img class="partners__logo" src="img/htmlacademy-logo.png" alt="Логотип сайта Html-Academy" width="199" height="68"></a></li>
+          <li class="partners__item"><a href="https://borodinski.ru" class="partners__link"><img class="partners__logo" src="img/borodinski-logo.png" alt="Логотип сайта барбершопа Бородинский" width="209" height="90"></a></li>
+          <li class="partners__item"><a href="https://pink-up.ru" class="partners__link"><img class="partners__logo" src="img/pinkup-logo.png" alt="Логотип Pink UP" width="185" height="52"></a></li>
+          <li class="partners__item"><a href="https://mishka.ru" class="partners__link"><img class="partners__logo" src="img/mishka-logo.png" alt="Логотип сайта MISHKA" width="173" height="84"></a></li>
         </ul>
       </section>
       <section class="map">
-        <img src="img/location.svg" alt="Картинка расположения на карте" class="location">
+        <img src="img/map.jpg" alt="Адрес компании: Санкт-Петербург, ул. Б. Конюшенная, д. 19/8" class="location" width="1440" height="416">
         <div class="write-us">
-          <p class="write-us__title">NЁRDS DESIGN STUDIO</p>
-          <!-- Можно ли здесь потом стилизовать с помощью <white-space>? -->
-          <p class="write-us__contacts">
-            191186, Санкт-Петербург,<br>
-            ул. Б. Конюшенная, д. 19/8<br>
-              
-            тел. +7 (812) 275-75-75</p>
-            <a class="write-us__link" href="#">Напишите нам</a>
-        </div>
+          <address class="write-us__address">
+            <p class="write-us__title">NЁRDS DESIGN STUDIO</p>
+            <p class="write-us__contacts">
+                  Санкт-Петербург,<br>
+                  ул. Б. Конюшенная, д. 19/8<br>
+                  <a href="tel:+78122757575">тел. +7 (812) 275-75-75</a>  
+            </p>
+          </address>
+          <a class="write-us__link" href="">Напишите нам</a>
+      </div>
       </section>
     </main>
     <footer class="main-footer">
@@ -99,7 +117,6 @@
         <li class="social-list__item"><a href="https://instagram.com/nerds" class="social-list__link">Инстаграм</a></li>
       </ul>
       <p class="main-footer__sale">
-        <!-- Считаю, что все-таки фразу "Давайте дружить.." нужно вложить в какой-то свой тег. Раз не стоит <b>, пусть будет strong-->
         <strong class="main-footer__sale-title">Давайте дружить, это выгодно!</strong>
         <span class="main-footer__sale-text">Скидка 10% для друзей из социальных сетей.</span>
       </p>
