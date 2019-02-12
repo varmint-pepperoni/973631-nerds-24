@@ -19,7 +19,88 @@
         </header>
         <main class="container">
             <h1 class="page-title">Магазин готовых шаблонов</h1>
+            <aside class="filter">
+                <h2 class="visually-hidden">Фильтр товаров</h2>
+                <form class="filter__form" method="get" action="https://echo.htmlacademy.ru">
+                    <fieldset class="filter__price">
+                        <!-- Почему бы тут не сделать h3? Имею ввиду Стоимость, сетка, особенности. -->
+                        <legend class="filter__price-title">Стоимость:</legend>
+                        <!-- Не знаю, как сделать этот блок с движущимися кружочками -->
+                        <!-- И мне кажется, здесь и далее я усложнила классы -->
+                        <div class="filter__price-settings">
+                            <span class="filter__price-lever-one"></span>
+                            <span class="filter__price-lever-two"></span>
+                        </div>
+                        <p class="filter__price-start">
+                            <label class="filter__price-label" for="price-start">От</label>
+                            <!-- Может ли id совпадать с name? -->
+                            <input type="text" id="price-start" placeholder="0" class="visually-hidden filter__price-text" name="price-start">
+                        </p>
+                        <p class="filter__price-finish">
+                            <label class="filter__price-label" for="price-finish">До</label>
+                            <input type="text" id="price-finish" placeholder="15 000" class="visually-hidden filter__price-text" name="price-finish">
+                        </p>
+                    </fieldset>
+                    <fieldset class="filter__grid">
+                        <legend class="filter__grid-title">Сетка:</legend>
+                        <ul class="filter__grid-list">
+                            <li class="filter__grid-item">
+                                <input class="visually-hidden filter__grid-radio" type="radio" name="grid-type" value="adaptive" id="grid-adaptive" checked>
+                                <label class="filter__grid-label" for="grid-adaptive">Адаптивная</label>
+                            </li>
+                            <li class="filter__grid-item">
+                                <input class="visually-hidden filter__grid-radio" type="radio" name="grid-type" value="fixed" id="grid-fixed">
+                                <label class="filter__grid-label" for="grid-fixed">Фиксированная</label>
+                            </li>
+                            <li class="filter__grid-item">
+                                <input class="visually-hidden filter__grid-radio" type="radio" name="grid-type" value="rubber" id="grid-rubber">
+                                <label class="filter__grid-label" for="grid-rubber">Резиновая</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <fieldset class="filter__feature">
+                        <legend class="filter__feature-title">Особенности:</legend>
+                        <ul class="filter__feature-list">
+                            <li class="filter__feature-item">
+                                <input class="visually-hidden filter__feature-checkbox" type="checkbox" name="slider" id="feature-slider">
+                                <label class="filter__feature-label" for="feature-slider">Слайдер</label>
+                            </li>
+                            <li class="filter__feature-item">
+                                <input class="visually-hidden filter__feature-checkbox" type="checkbox" name="advantages" id="feature-advantages">
+                                <label class="filter__feature-label" for="feature-advantages">Блок преимуществ</label>
+                            </li>
+                            <li class="filter__feature-item">
+                                <input class="visually-hidden filter__feature-checkbox" type="checkbox" name="news" id="feature-news">
+                                <label class="filter__feature-label" for="feature-news">Новости</label>
+                            </li>
+                            <li class="filter__feature-item">
+                                <input class="visually-hidden filter__feature-checkbox" type="checkbox" name="gallery" id="feature-gallery">
+                                <label class="filter__feature-label" for="feature-gallery">Галерея</label>
+                            </li>
+                            <li class="filter__feature-item">
+                                <input class="visually-hidden filter__feature-checkbox" type="checkbox" name="basket" id="feature-basket">
+                                <label class="filter__feature-label" for="feature-basket">Корзина</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <button type="submit" class="filter__button">Показать</button>
+                </form>
+            </aside>
             <section class="catalog">
+                <section class="sort">
+                    <h2 class="visually-hidden">Сортировка товаров</h2>
+                    <ul class="sort__list">
+                        <li class="sort__item"><a class="sort__link" href="sort-prise.html">По цене</a></li>
+                        <li class="sort__item"><a class="sort__link" href="sort-type.html">По типу</a></li>
+                        <li class="sort__item"><a class="sort__link" href="sort-title.html">По названию</a></li>
+                        <li class="sort__item">
+                            <a class="sort__link" href="sort-asc.html"><span class="visually-hidden">По возрастанию</span></a>
+                        </li>
+                        <li class="sort__item">
+                            <a class="sort__link" href="sort-desc.html"><span class="visually-hidden">По убыванию</span></a>
+                        </li>
+                    </ul>
+                </section>
                 <h2 class="visually-hidden">Готовые шаблоны</h2>
                 <ul class="catalog__list">
                     <li class="catalog-item">
@@ -109,6 +190,24 @@
                     </address>
                     <a class="write-us__link" href="">Напишите нам</a>
                 </div>
+            </section>
+            <section class="modal-feedback">
+                <h2 class="modal-feedback__title">Напишите нам</h2>
+                <form class="modal-feedback__form" action="https://echo.htmlacademy.ru" method="post">
+                    <p class="modal-feedback__user-name">
+                        <label for="user-name" class="visually-hidden">Ваше имя:</label>
+                        <input class="modal-feedback__name-input" id="user-name" type="text" name="name" placeholder="Имя Фамилия">
+                    </p>
+                    <p class="modal-feedback__user-email">
+                        <label for="user-email" class="visually-hidden">Ваш e-mail:</label>
+                        <input class="modal-feedback__name-input" id="user-email" type="text" name="email" placeholder="email@example.com">
+                    </p>
+                    <p class="modal-feedback__text">
+                        <label for="user-text" class="visually-hidden">Текст письма:</label>
+                        <textarea class="modal-feedback__textarea" id="user-text" name="text" placeholder="В свободной форме"></textarea>
+                    </p>
+                    <button class="modal-feedback__button" type="submit">Отправить</button>
+                </form>
             </section>
         </main>
         <footer class="main-footer">
