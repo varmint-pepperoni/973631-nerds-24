@@ -3,6 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <title>HTML Academy: Нёрдс</title>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
         <header class="main-header">
@@ -18,96 +21,96 @@
             </nav>
         </header>
         <main class="container">
-            <h1 class="page-title">Магазин готовых шаблонов</h1>
+            <h1 class="page-title title">Магазин готовых шаблонов</h1>
             <section class="catalog">
+                <header class="sort">
+                            <h2 class="visually-hidden">Каталог шаблонов и фильтр</h2>
+                            <p class="sort__title">Сортировать:</p>
+                            <ul class="sort__list">
+                                <li class="sort__item"><a class="sort__link" href="sort-prise.html">По цене</a></li>
+                                <li class="sort__item"><a class="sort__link" href="sort-type.html">По типу</a></li>
+                                <li class="sort__item"><a class="sort__link" href="sort-title.html">По названию</a></li>
+                                <li class="sort__item">
+                                    <a class="sort__link" href="sort-asc.html"><span class="visually-hidden">По возрастанию</span></a>
+                                </li>
+                                <li class="sort__item">
+                                    <a class="sort__link" href="sort-desc.html"><span class="visually-hidden">По убыванию</span></a>
+                                </li>
+                            </ul>
+                </header>
                 <aside class="filter">
                     <form class="filter__form" method="get" action="https://echo.htmlacademy.ru">
-                        <fieldset class="filter__price">
-                            <legend class="filter__price-title">Стоимость:</legend>
+                        <fieldset class="filter__price fieldset">
+                            <legend class="filter__price-title filter__title">Стоимость:</legend>
                             <!-- Не знаю, как сделать этот блок с движущимися кружочками. Сделала баттонами, но они выглядят странно. -->
                             <div class="filter__price-settings">
-                                <button type="button" class="filter__price-lever-one"></button>
-                                <button type="button" class="filter__price-lever-two"></button>
+                                <button class="filter__price-lever-one" type="button"></button>
+                                <button class="filter__price-lever-two" type="button"></button>
                             </div>
                             <p class="filter__price-start">
-                                <input type="text" id="start" placeholder="0" class="visually-hidden filter__price-text" name="price-start">
+                                <input class="visually-hidden filter__price-text" type="text" id="start" placeholder="0" name="price-start">
                                 <label class="filter__price-label" for="start">От</label>   
                             </p>
                             <p class="filter__price-finish">
-                                <input type="text" id="finish" placeholder="15 000" class="visually-hidden filter__price-text" name="price-finish">
+                                <input class="visually-hidden filter__price-text" type="text" id="finish" placeholder="15 000" name="price-finish">
                                 <label class="filter__price-label" for="finish">До</label>
                             </p>
                         </fieldset>
-                        <fieldset class="filter__grid">
-                            <legend class="filter__grid-title">Сетка:</legend>
-                            <ul class="filter__grid-list">
-                                <li class="filter__grid-item">
-                                    <input class="visually-hidden filter__grid-radio" type="radio" name="grid-type" value="adaptive" id="adaptive" checked>
-                                    <label class="filter__grid-label" for="adaptive">Адаптивная</label>
+                        <fieldset class="filter__grid fieldset">
+                            <legend class="filter__grid-title filter__title">Сетка:</legend>
+                            <ul class="filter__grid-list filter__list">
+                                <li class="filter__grid-item filter__item">
+                                    <input class="visually-hidden filter__grid-radio filter__input" type="radio" name="grid-type" value="adaptive" id="adaptive" checked>
+                                    <label class="filter__grid-label filter__label" for="adaptive">Адаптивная</label>
                                 </li>
-                                <li class="filter__grid-item">
-                                    <input class="visually-hidden filter__grid-radio" type="radio" name="grid-type" value="fixed" id="fixed">
-                                    <label class="filter__grid-label" for="fixed">Фиксированная</label>
+                                <li class="filter__grid-item filter__item">
+                                    <input class="visually-hidden filter__grid-radio filter__input" type="radio" name="grid-type" value="fixed" id="fixed">
+                                    <label class="filter__grid-label filter__label" for="fixed">Фиксированная</label>
                                 </li>
-                                <li class="filter__grid-item">
-                                    <input class="visually-hidden filter__grid-radio" type="radio" name="grid-type" value="rubber" id="rubber">
-                                    <label class="filter__grid-label" for="rubber">Резиновая</label>
-                                </li>
-                            </ul>
-                        </fieldset>
-                        <fieldset class="filter__feature">
-                            <legend class="filter__feature-title">Особенности:</legend>
-                            <ul class="filter__feature-list">
-                                <li class="filter__feature-item">
-                                    <input class="visually-hidden filter__feature-checkbox" type="checkbox" name="slider" id="slider">
-                                    <label class="filter__feature-label" for="slider">Слайдер</label>
-                                </li>
-                                <li class="filter__feature-item">
-                                    <input class="visually-hidden filter__feature-checkbox" type="checkbox" name="advantages" id="advantages">
-                                    <label class="filter__feature-label" for="advantages">Блок преимуществ</label>
-                                </li>
-                                <li class="filter__feature-item">
-                                    <input class="visually-hidden filter__feature-checkbox" type="checkbox" name="news" id="news">
-                                    <label class="filter__feature-label" for="news">Новости</label>
-                                </li>
-                                <li class="filter__feature-item">
-                                    <input class="visually-hidden filter__feature-checkbox" type="checkbox" name="gallery" id="gallery">
-                                    <label class="filter__feature-label" for="gallery">Галерея</label>
-                                </li>
-                                <li class="filter__feature-item">
-                                    <input class="visually-hidden filter__feature-checkbox" type="checkbox" name="basket" id="basket">
-                                    <label class="filter__feature-label" for="basket">Корзина</label>
+                                <li class="filter__grid-item filter__item">
+                                    <input class="visually-hidden filter__grid-radio filter__input" type="radio" name="grid-type" value="rubber" id="rubber">
+                                    <label class="filter__grid-label filter__label" for="rubber">Резиновая</label>
                                 </li>
                             </ul>
                         </fieldset>
-                        <button class="filter__button">Показать</button>
+                        <fieldset class="filter__feature fieldset">
+                            <legend class="filter__feature-title filter__title">Особенности:</legend>
+                            <ul class="filter__feature-list filter__list">
+                                <li class="filter__feature-item filter__item">
+                                    <input class="visually-hidden filter__feature-checkbox filter__input" type="checkbox" name="slider" id="slider" checked>
+                                    <label class="filter__feature-label filter__label" for="slider">Слайдер</label>
+                                </li>
+                                <li class="filter__feature-item filter__item">
+                                    <input class="visually-hidden filter__feature-checkbox filter__input" type="checkbox" name="advantages" id="advantages">
+                                    <label class="filter__feature-label filter__label" for="advantages">Блок преимуществ</label>
+                                </li>
+                                <li class="filter__feature-item filter__item">
+                                    <input class="visually-hidden filter__feature-checkbox filter__input" type="checkbox" name="news" id="news" checked>
+                                    <label class="filter__feature-label filter__label" for="news">Новости</label>
+                                </li>
+                                <li class="filter__feature-item filter__item">
+                                    <input class="visually-hidden filter__feature-checkbox filter__input" type="checkbox" name="gallery" id="gallery">
+                                    <label class="filter__feature-label filter__label" for="gallery">Галерея</label>
+                                </li>
+                                <li class="filter__feature-item filter__item">
+                                    <input class="visually-hidden filter__feature-checkbox filter__input" type="checkbox" name="basket" id="basket">
+                                    <label class="filter__feature-label filter__label" for="basket">Корзина</label>
+                                </li>
+                            </ul>
+                        </fieldset>
+                        <button class="filter__button button button_gray">Показать</button>
                     </form>
                 </aside>
-                <!-- Может быть шапку поднять и вставить перед aside? -->
-                <header class="sort">
-                    <h2 class="visually-hidden">Каталог шаблонов и фильтр</h2>
-                    <ul class="sort__list">
-                        <li class="sort__item"><a class="sort__link" href="sort-prise.html">По цене</a></li>
-                        <li class="sort__item"><a class="sort__link" href="sort-type.html">По типу</a></li>
-                        <li class="sort__item"><a class="sort__link" href="sort-title.html">По названию</a></li>
-                        <li class="sort__item">
-                            <a class="sort__link" href="sort-asc.html"><span class="visually-hidden">По возрастанию</span></a>
-                        </li>
-                        <li class="sort__item">
-                            <a class="sort__link" href="sort-desc.html"><span class="visually-hidden">По убыванию</span></a>
-                        </li>
-                    </ul>
-                </header>
                 <ul class="catalog-list">
                     <li class="catalog-item">
                         <article class="product">
                             <img class="product__img" src="img/sedona.jpg" width="360" height="576" alt="Макет информационного сайта для туристов «SEDONA»">
                             <div class="product__desc">
                                 <h3 class="product__desc-name">
-                                    <a href="sedona.html" class="product__link">SEDONA</a>
+                                    <a class="product__link" href="sedona.html">SEDONA</a>
                                 </h3>
                                 <p class="product__desc-text">Информационный сайт для туристов</p>
-                                <p class="product__desc-button">9 900 Руб.</p>
+                                <p class="product__desc-button"><button class="button">9 900 Руб.</button></p>
                             </div>
                         </article>  
                     </li>
@@ -116,10 +119,10 @@
                             <img class="product__img" src="img/pink-up.jpg" width="360" height="576" alt="Макет продуктового лендинга приложений для iOS и Android «PINK UP»">
                             <div class="product__desc">
                                 <h3 class="product__desc-name">
-                                    <a href="pink-up.html" class="product__link">PINK UP</a>
+                                    <a class="product__link" href="pink-up.html">PINK UP</a>
                                 </h3>
                                 <p class="product__desc-text">Продуктовый лендинг приложения для iOS и Android</p>
-                                <p class="product__desc-button">9 900 Руб.</p>
+                                <p class="product__desc-button"><button class="button">9 900 Руб.</button></p>
                             </div>
                         </article> 
                     </li>
@@ -128,10 +131,10 @@
                             <img class="product__img" src="img/barbershop.jpg" width="360" height="576" alt="Сайт салона красоты для мужчин «BARBERSHOP»">
                             <div class="product__desc">
                                 <h3 class="product__desc-name">
-                                    <a href="barbershop.html" class="product__link">BARBERSHOP</a>
+                                    <a class="product__link" href="barbershop.html">BARBERSHOP</a>
                                 </h3>
                                 <p class="product__desc-text">Сайт салона красоты. Для мужчин, да.</p>
-                                <p class="product__desc-button">9 900 Руб.</p>
+                                <p class="product__desc-button"><button class="button">9 900 Руб.</button></p>
                             </div>
                         </article> 
                     </li>
@@ -140,10 +143,10 @@
                             <img class="product__img" src="img/mishka.jpg" width="360" height="576" alt="Интернет-магазин вязаных игрушек «MISHKA»">
                             <div class="product__desc">
                                 <h3 class="product__desc-name">
-                                    <a href="mishka.html" class="product__link">MISHKA</a>
+                                    <a class="product__link" href="mishka.html">MISHKA</a>
                                 </h3>
                                 <p class="product__desc-text">Интернет-магазин вязаных игрушек</p>
-                                <p class="product__desc-button">9 900 Руб.</p>
+                                <p class="product__desc-button"><button class="button">9 900 Руб.</button></p>
                             </div>
                         </article>    
                     </li>
@@ -152,10 +155,10 @@
                             <img class="product__img" src="img/a-plus.jpg" width="360" height="576" alt="Лендинг курсов повышения квалификации «A PLUS»">
                             <div class="product__desc">
                                 <h3 class="product__desc-name">
-                                    <a href="a-plus.html" class="product__link">A PLUS</a>
+                                    <a  class="product__link" href="a-plus.html">A PLUS</a>
                                 </h3>
                                 <p class="product__desc-text">Лендинг курсов повышения квалификации</p>
-                                <p class="product__desc-button">9 900 Руб.</p>
+                                <p class="product__desc-button"><button class="button">9 900 Руб.</button></p>
                             </div>
                         </article>
                     </li>
@@ -164,17 +167,23 @@
                             <img class="product__img" src="img/kvast.jpg" width="360" height="576" alt="Промо-сайт производителя крафтового кваса «КВАСТ»">
                             <div class="product__desc">
                                 <h3 class="product__desc-name">
-                                    <a href="kvast.html" class="product__link">КВАСТ</a>
+                                    <a class="product__link" href="kvast.html">КВАСТ</a>
                                 </h3>
                                 <p class="product__desc-text">Промо-сайт производителя крафтового кваса</p>
-                                <p class="product__desc-button">9 900 Руб.</p>
+                                <p class="product__desc-button"><button class="button">9 900 Руб.</button></p>
                             </div>
                         </article>
                     </li>
                 </ul>
+                <ul class="pagination-list">
+                    <li class="pagination-list__item pagination-list__item_current"><a class="pagination-list__link button button_gray">1</a></li>
+                    <li class="pagination-list__item"><a class="pagination-list__link button button_gray" href="#">2</a></li>
+                    <li class="pagination-list__item"><a class="pagination-list__link button button_gray" href="#">3</a></li>
+                    <li class="pagination-list__item"><a class="pagination-list__link button button_gray" href="#">Следующая</a></li>
+                </ul>
             </section>
             <section class="map">
-                <img src="img/map.jpg" alt="Адрес компании: Санкт-Петербург, ул. Б. Конюшенная, д. 19/8" class="location" width="1440" height="416">
+                <img class="location" src="img/map.jpg" alt="Адрес компании: Санкт-Петербург, ул. Б. Конюшенная, д. 19/8" width="1440" height="416">
                 <div class="write-us">
                     <address class="write-us__address">
                         <p class="write-us__title">NЁRDS DESIGN STUDIO</p>
@@ -202,20 +211,20 @@
         <section class="modal-feedback">
             <h2 class="modal-feedback__title">Напишите нам</h2>
             <form class="modal-feedback__form" action="https://echo.htmlacademy.ru" method="post">
-                <p class="modal-feedback__user-name">
-                    <label for="user-name" class="visually-hidden">Ваше имя:</label>
-                    <input class="modal-feedback__name-input" id="user-name" type="text" name="name" placeholder="Имя Фамилия">
-                </p>
-                <p class="modal-feedback__user-email">
-                    <label for="user-email" class="visually-hidden">Ваш e-mail:</label>
-                    <input class="modal-feedback__name-input" id="user-email" type="text" name="email" placeholder="email@example.com">
-                </p>
-                <p class="modal-feedback__text">
-                    <label for="user-text" class="visually-hidden">Текст письма:</label>
-                    <textarea class="modal-feedback__textarea" id="user-text" name="text" placeholder="В свободной форме"></textarea>
-                </p>
-                <button class="modal-feedback__button" type="submit">Отправить</button>
+              <p class="modal-feedback__user-name">
+                <label class="modal-feedback__label" for="user-name">Ваше имя:</label>
+                <input class="modal-feedback__name-input input" id="user-name" type="text" name="name" placeholder="Имя Фамилия">
+              </p>
+              <p class="modal-feedback__user-email">
+                <label class="modal-feedback__label" for="user-email">Ваш e-mail:</label>
+                <input class="modal-feedback__name-input input" id="user-email" type="text" name="email" placeholder="email@example.com">
+              </p>
+              <p class="modal-feedback__text">
+                <label class="modal-feedback__label" for="user-text">Текст письма:</label>
+                <textarea class="modal-feedback__textarea textarea" id="user-text" name="text" placeholder="В свободной форме"></textarea>
+              </p>
+              <button class="modal-feedback__button button" type="submit">Отправить</button>
             </form>
-        </section>
+          </section>
     </body>
 </html>

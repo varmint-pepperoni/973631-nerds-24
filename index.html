@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Нёрдс</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="main-header">
@@ -23,44 +26,44 @@
       <section class="slider">
         <ul class="slider__main-list">
           <li class="slider__main-item">
-            <p class="slider__title">Долго, дорого, скурпулезно.</p>
+            <p class="slider__title title">Долго, дорого, скурпулезно.</p>
             <p class="slider__text">Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
-            <a class="slider__button" href="learn-more.html">Узнать больше</a>
+            <a class="slider__button button" href="learn-more.html">Узнать больше</a>
           </li>
           <li class="slider__main-item">
-            <p class="slider__title">Любим математику как никто другой</p>
+            <p class="slider__title title">Любим математику как никто другой</p>
             <p class="slider__text">Никакого креатива, только математические формулы для расчета идеальных пропорций.</p>
-            <a class="slider__button" href="learn-more.html">Узнать больше</a>
+            <a class="slider__button button" href="learn-more.html">Узнать больше</a>
           </li>
           <li class="slider__main-item">
-            <p class="slider__title">Только ночь, только хардкор</p>
+            <p class="slider__title title">Только ночь, только хардкор</p>
             <p class="slider__text">Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
-            <a class="slider__button" href="learn-more.html">Узнать больше</a>
+            <a class="slider__button button" href="learn-more.html">Узнать больше</a>
           </li>
         </ul>
         <ul class="slider__switch-list">
-          <li class="slider__switch-item"><button class="visually-hidden">Первый слайд</button></li>
-          <li class="slider__switch-item"><button class="visually-hidden">Второй слайд</button></li>
-          <li class="slider__switch-item"><button class="visually-hidden">Третий слайд</button></li>
+          <li class="slider__switch-item"><button class="slider__switch-button"><span class="visually-hidden">Первый слайд</span></button></li>
+          <li class="slider__switch-item"><button class="slider__switch-button"><span class="visually-hidden">Второй слайд</span></button></li>
+          <li class="slider__switch-item"><button class="slider__switch-button"><span class="visually-hidden">Третий слайд</span></button></li>
         </ul>
       </section>
       <section class="services">
         <h2 class="visually-hidden">Услуги</h2>
         <ul class="services__list">
-          <li class="services__item">
-            <h3>Веб-сайты</h3>
+          <li class="services__item services__item_theme_sites">
+            <h3 class="services__title">Веб-сайты</h3>
             <p class="services__text">Мир никогда не будет прежним после того как увидит ваш сайт!</p>
-            <a href="order.html" class="services__button">Заказать</a>
+            <a class="services__button button" href="order.html">Заказать</a>
           </li>
-          <li class="services__item">
-            <h3>Приложения</h3>
+          <li class="services__item services__item_theme_apps">
+            <h3 class="services__title">Приложения</h3>
             <p class="services__text">Покорите топ-10 приложений в AppStore и Google Play</p>
-            <a href="order.html" class="services__button">Заказать</a>
+            <a class="services__button button services__button_color_green" href="order.html">Заказать</a>
           </li>
-          <li class="services__item">
-            <h3>Презентации</h3>
+          <li class="services__item services__item_theme_shows">
+            <h3 class="services__title">Презентации</h3>
             <p class="services__text">Вы даже не подозреваете, насколько вы изумительны!</p>
-            <a href="order.html" class="services__button">Заказать</a>
+            <a class="services__button button services__button_color_yellow" href="order.html">Заказать</a>
           </li>
       </ul>
       </section>
@@ -96,7 +99,7 @@
         </ul>
       </section> -->
       <section class="statistic">
-        <img src="img/logo-color.jpg" width="360" height="208" alt="Цветной логотип интернет-магазина «Нёрдс»" class="logo-two">
+        <img class="logo-two" src="img/logo-color.jpg" width="360" height="208" alt="Цветной логотип интернет-магазина «Нёрдс»">
         <table class="statistic__table">
           <caption class="statistic__table-title">С 2004 года любим точность во всем:</caption>
           <tr class="statistic__row">
@@ -120,36 +123,18 @@
         </ul>
       </section>
       <section class="map">
-        <img src="img/map.jpg" alt="Адрес компании: Санкт-Петербург, ул. Б. Конюшенная, д. 19/8" class="location" width="1440" height="416">
+        <img class="location" src="img/map.jpg" alt="Адрес компании: Санкт-Петербург, ул. Б. Конюшенная, д. 19/8" width="1440" height="416">
         <div class="write-us">
           <address class="write-us__address">
             <p class="write-us__title">NЁRDS DESIGN STUDIO</p>
             <p class="write-us__contacts">
                   Санкт-Петербург,<br>
                   ул. Б. Конюшенная, д. 19/8<br>
-                  <a href="tel:+78122757575">тел. +7 (812) 275-75-75</a>  
+                  <a class="write-us__phone" href="tel:+78122757575">тел. +7 (812) 275-75-75</a>  
             </p>
           </address>
-          <a class="write-us__link" href="">Напишите нам</a>
+          <a class="write-us__link button" href="">Напишите нам</a>
       </div>
-      </section>
-      <section class="modal-feedback">
-        <h2 class="modal-feedback__title">Напишите нам</h2>
-        <form class="modal-feedback__form" action="https://echo.htmlacademy.ru" method="post">
-          <p class="modal-feedback__user-name">
-            <label for="user-name" class="visually-hidden">Ваше имя:</label>
-            <input class="modal-feedback__name-input" id="user-name" type="text" name="name" placeholder="Имя Фамилия">
-          </p>
-          <p class="modal-feedback__user-email">
-            <label for="user-email" class="visually-hidden">Ваш e-mail:</label>
-            <input class="modal-feedback__name-input" id="user-email" type="text" name="email" placeholder="email@example.com">
-          </p>
-          <p class="modal-feedback__text">
-            <label for="user-text" class="visually-hidden">Текст письма:</label>
-            <textarea class="modal-feedback__textarea" id="user-text" name="text" placeholder="В свободной форме"></textarea>
-          </p>
-          <button class="modal-feedback__button" type="submit">Отправить</button>
-        </form>
       </section>
     </main>
     <footer class="main-footer">
@@ -163,5 +148,23 @@
         <span class="main-footer__sale-text">Скидка 10% для друзей из социальных сетей.</span>
       </p>
     </footer>
+    <section class="modal-feedback">
+      <h2 class="modal-feedback__title">Напишите нам</h2>
+      <form class="modal-feedback__form" action="https://echo.htmlacademy.ru" method="post">
+        <p class="modal-feedback__user-name">
+          <label class="modal-feedback__label" for="user-name">Ваше имя:</label>
+          <input class="modal-feedback__name-input input" id="user-name" type="text" name="name" placeholder="Имя Фамилия">
+        </p>
+        <p class="modal-feedback__user-email">
+          <label class="modal-feedback__label" for="user-email">Ваш e-mail:</label>
+          <input class="modal-feedback__name-input input" id="user-email" type="text" name="email" placeholder="email@example.com">
+        </p>
+        <p class="modal-feedback__text">
+          <label class="modal-feedback__label" for="user-text">Текст письма:</label>
+          <textarea class="modal-feedback__textarea textarea" id="user-text" name="text" placeholder="В свободной форме"></textarea>
+        </p>
+        <button class="modal-feedback__button button" type="submit">Отправить</button>
+      </form>
+    </section>
   </body>
 </html>

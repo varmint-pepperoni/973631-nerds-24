@@ -1,0 +1,515 @@
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #283136;
+
+    background-color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+}
+
+.input,
+.textarea {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 400; 
+    outline: none;
+
+    background-color: transparent;
+    border: 2px solid #d7dcde;
+    border-radius: 3px;
+}
+
+.textarea {
+    resize: none;
+}
+
+.input:hover,
+.textarea:hover {
+    border: 2px solid #b4b9bb;
+}
+.input:focus,
+.textarea:focus {
+    border: 2px solid #000000;
+}
+
+/* Не работает с префиксами. Без них работает (см.ниже)*/
+/* input::-moz-placeholder,
+input::-webkit-input-placeholder,
+input::-ms-input-placeholder,
+input:-ms-input-placeholder,
+input::placeholder {
+    color: #444444;
+} */
+
+.input::placeholder,
+.textarea::placeholder {
+    color: #afafaf;
+} 
+
+.input:focus::placeholder,
+.textarea:focus::placeholder {
+    color: #444444;
+} 
+
+.button {
+    font-size: 16px;
+    line-height: 18px;
+    color: #ffffff;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: middle;
+    outline: none;
+
+    background-color: #fb565a;
+    border-radius: 3px;
+    border: none;
+}
+
+.button:hover,
+.button:focus {
+    background-color: #e74246;
+}
+
+.button:active {
+    color: rgba(255, 255, 255, 0.3);
+    box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
+
+    background-color: #d7373b;
+}
+
+.main-navigation {
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 500;
+    color: #000000;
+    text-transform: uppercase;
+
+    background-color: #eeeeee;
+}
+
+.main-logo:hover,
+.main-logo:focus {
+    opacity: 0.8;
+}
+
+.main-logo:active {
+    opacity: 0.3;
+}
+
+.main-navigation__list {
+    list-style: none;
+}
+
+.main-navigation__link, 
+.shop-basket {
+    color: #000000;
+}
+
+.main-navigation__link:hover,
+.main-navigation__link:focus, 
+.shop-basket:hover,
+.shop-basket:focus {
+    color: #fb565a;
+}
+
+.slider {
+    background-color: #eeeeee; 
+}
+
+.slider__main-list {
+    list-style: none;
+}
+
+.title {
+    font-size: 55px;
+    line-height: 55px;
+    font-weight: 500;
+    color: #000000;
+}
+
+.slider__main-item:nth-child(1) {
+    background-image: url(../img/slide1.png);
+    background-repeat: no-repeat;
+}
+
+.slider__main-item:nth-child(2) {
+    background-image: url(../img/slide2.png);
+    background-repeat: no-repeat;
+}
+
+.slider__main-item:nth-child(3) {
+    background-image: url(../img/slide3.png);
+    background-repeat: no-repeat;
+}
+
+.slider__text {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.slider__switch-list {
+    list-style: none;
+}
+
+.services__list {
+    border-bottom: 2px solid #eeeeee;
+    list-style: none;
+}
+
+.services__item_theme_sites {
+    background-image: url(../img/illustration-1.jpg);
+    background-repeat: no-repeat;
+}
+
+.services__item_theme_apps {
+    background-image: url(../img/illustration-2.jpg);
+    background-repeat: no-repeat;
+}
+
+.services__item_theme_shows {
+    background-image: url(../img/illustration-3.jpg);
+    background-repeat: no-repeat;
+}
+
+.services__title {
+    font-size: 24px;
+    line-height: 30px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #000000;
+}
+
+.services__text {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.services__button_color_green {
+    background-color: #00ca74;
+}
+
+.services__button_color_green:focus,
+.services__button_color_green:hover {
+    background-color: #00bc6c;
+}
+
+.services__button_color_green:active {
+    color: #74c69a;
+
+    background-color: #00aa62;
+}
+
+.services__button_color_yellow {
+    background-color: #efc84a;
+}
+
+.services__button_color_yellow:focus,
+.services__button_color_yellow:hover {
+    background-color: #eab534;
+}
+
+.services__button_color_yellow:active {
+    color: #edc47c;
+
+    background-color: #e5a722;
+}
+
+.about-us__slogan {
+    font-size: 45px;
+    line-height: 45px;
+    font-weight: 500;
+    color: #000000;
+}
+
+.about-us__mission {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.about-us__services-desc {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #000000;
+}
+
+.about-us__services-list {
+    list-style: none;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.statistic__table-title {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.statistic__row {
+    color: #000000;
+}
+
+.statistic__cell {
+    font-size: 45px;
+    line-height: 10px;
+    font-weight: 700;
+}
+
+.statistic__percent {
+    font-size: 25px;
+    line-height: 10px;
+    font-weight: 700;
+}
+
+.statistic__cell-head {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 400;
+}
+
+.partners__list {
+    list-style: none;
+    border-top: 2px solid #eeeeee;
+    border-bottom: 2px solid #eeeeee;
+}
+
+.partners__item {
+    border-right: 2px solid#eeeeee;
+}
+
+.partners__item:last-child {
+    border-right: none;
+}
+
+.partners__link {
+    opacity: 0.2;
+}
+
+.partners__link:hover,
+.partners__link:focus {
+    opacity: 1;
+}
+
+.partners__link:active {
+    opacity: 0.1;
+}
+
+.write-us__address {
+    font-style: normal;
+}
+
+.write-us__title {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #000000;
+}
+
+.write-us__contacts {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 400;
+    color: #666666;
+}
+
+.write-us__phone {
+    color: #666666;
+}
+
+.social-list {
+    list-style: none;
+}
+
+.social-list__link {
+    color: #283136;
+}
+
+.main-footer__sale-title {
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: 700;
+    color: #000000;
+}
+
+.main-footer__sale-text {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+    color: #444444;
+}
+
+.modal-feedback {
+    box-shadow: 0px 20px 40px 0 rgba(0, 1, 1, 0.75);
+}
+
+.modal-feedback__title {
+    font-size: 45px;
+    line-height: 45px;
+    font-weight: 400;
+    color: #000000;
+}
+
+.modal-feedback__label {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 700;
+    color: #000000;
+}
+
+/* Стили для страницы inner.html */
+
+.page-title {
+    text-align: center;
+
+    background-color: #eeeeee;
+}
+
+.sort__title,
+.filter__title {
+    font-size: 18px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: 700;
+}
+
+.sort__item {
+    list-style: none;
+}
+
+.sort__link {
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #cacaca;
+}
+
+.sort__link:hover,
+.sort__link:focus {
+    color: #8d8d8d;
+}
+
+.sort__link:active {
+    color: #000000;
+}
+
+.fieldset {
+    border: none;
+}
+
+.filter__price-settings {
+    background-color: #eeeeee;
+}
+
+.filter__price-label {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.filter__list {
+    list-style: none;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+}
+
+/* .filter__item:hover,
+.filter__item:focus {
+    
+} */
+
+.filter__input:disabled + .filter__label{
+    /* color: #ced0d0; */
+    opacity: 0.3;
+}
+
+.button_gray {
+    color: #000000;
+
+    background-color: #eeeeee;
+}
+
+.button_gray:hover,
+.button_gray:focus {
+    color: #000000;
+
+    background-color: #dfdfdf;
+}
+
+.button_gray:active {
+    color: #a9a9a9;
+
+    box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
+    background-color: #d5d5d5;
+}
+
+.catalog-list {
+    list-style: none;
+}
+
+.product__img {
+    border: 1px solid #eeeeee;
+}
+
+/* .product__img::before {
+    background-color: #4d4d4d;
+    width: 360px;
+    height: 40px;
+    border-radius: 3px;
+    display: block;
+} */
+
+.product__desc {
+    background-color: #eeeeee;
+}
+
+.product__desc-name {
+    text-align: center;
+}
+
+.product__link {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #000000;
+}
+
+.product__desc-text {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 400;
+    color: #666666;
+    text-align: center;
+}
+
+.product__desc-button {
+    text-align: center;
+}
+
+.pagination-list {
+    list-style: none;
+}
+
+.pagination-list__item_current {
+background-color: transparent;
+
+border:  3px solid #dbdbdb;
+}
