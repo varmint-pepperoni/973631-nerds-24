@@ -508,8 +508,11 @@ input::placeholder {
     list-style: none;
 }
 
-.pagination-list__item_current {
-background-color: transparent;
+.button_gray-active,
+.button_gray-active:hover,
+.button_gray-active:focus,
+.button_gray-active:active {
+    background-color: transparent;
 
-border:  3px solid #dbdbdb;
+    border:  3px solid #dbdbdb;
 }
