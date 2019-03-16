@@ -153,6 +153,32 @@
                 </address>
                 <a class="write-us__link button" href="">Напишите нам</a>
             </div>
+            <section class="modal-feedback">
+                <h2 class="modal-feedback__title">Напишите нам</h2>
+                <button class="modal-feedback__close">
+                    <span class="visually-hidden">Закрыть</span>
+                </button>
+                <form class="modal-feedback__form" action="https://echo.htmlacademy.ru" method="post">
+                    <div class="modal-feedback__user">
+                        <p class="modal-feedback__user-name">
+                            <label class="modal-feedback__label" for="user-name">Ваше имя:</label>
+                            <input class="modal-feedback__name-input input" id="user-name" type="text" name="name"
+                                placeholder="Имя Фамилия">
+                        </p>
+                        <p class="modal-feedback__user-email">
+                            <label class="modal-feedback__label" for="user-email">Ваш e-mail:</label>
+                            <input class="modal-feedback__name-input input" id="user-email" type="text" name="email"
+                                placeholder="email@example.com">
+                        </p>
+                    </div>
+                    <p class="modal-feedback__text">
+                        <label class="modal-feedback__label" for="user-text">Текст письма:</label>
+                        <textarea class="modal-feedback__textarea textarea" id="user-text" name="text"
+                            placeholder="В свободной форме"></textarea>
+                    </p>
+                    <button class="modal-feedback__button button" type="submit">Отправить</button>
+                </form>
+            </section>
         </section>
         <div class="main-footer__info container">
             <ul class="social-list">
@@ -195,27 +221,6 @@
             </p>
         </div>
     </footer>
-    <section class="modal-feedback">
-        <h2 class="modal-feedback__title">Напишите нам</h2>
-        <form class="modal-feedback__form" action="https://echo.htmlacademy.ru" method="post">
-            <p class="modal-feedback__user-name">
-                <label class="modal-feedback__label" for="user-name">Ваше имя:</label>
-                <input class="modal-feedback__name-input input" id="user-name" type="text" name="name"
-                    placeholder="Имя Фамилия">
-            </p>
-            <p class="modal-feedback__user-email">
-                <label class="modal-feedback__label" for="user-email">Ваш e-mail:</label>
-                <input class="modal-feedback__name-input input" id="user-email" type="text" name="email"
-                    placeholder="email@example.com">
-            </p>
-            <p class="modal-feedback__text">
-                <label class="modal-feedback__label" for="user-text">Текст письма:</label>
-                <textarea class="modal-feedback__textarea textarea" id="user-text" name="text"
-                    placeholder="В свободной форме"></textarea>
-            </p>
-            <button class="modal-feedback__button button" type="submit">Отправить</button>
-        </form>
-    </section>
 </body>
 
 </html>
