@@ -32,85 +32,6 @@
     <main class="container main-shop">
         <section class="catalog">
             <h2 class="visually-hidden">Каталог шаблонов и фильтр</h2>
-            <aside class="filter">
-                <form class="filter__form" method="get" action="https://echo.htmlacademy.ru">
-                    <fieldset class="filter__price fieldset">
-                        <legend class="filter__price-title filter__title">Стоимость:</legend>
-                        <div class="filter__price-block">
-                            <div class="filter__price-range">
-                                <div class="filter__price-selected">
-                                    <button class="filter__price-level filter__price-lever-one" type="button"></button>
-                                    <button class="filter__price-level filter__price-lever-two" type="button"></button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="filter__price-span">
-                            <p class="filter__price-start">
-                                <label class="filter__price-label" for="start">От</label>
-                                <input class="filter__price-text" type="text" id="start" placeholder="0"
-                                    name="price-start">
-                            </p>
-                            <p class="filter__price-finish">
-                                <label class="filter__price-label" for="finish">До</label>
-                                <input class="filter__price-text" type="text" id="finish" placeholder="15 000"
-                                    name="price-finish">
-                            </p>
-                        </div>
-                    </fieldset>
-                    <fieldset class="filter__grid fieldset">
-                        <legend class="filter__grid-title filter__title">Сетка:</legend>
-                        <ul class="filter__grid-list filter__list">
-                            <li class="filter__grid-item filter__item">
-                                <input class="visually-hidden filter__grid-radio filter__input" type="radio"
-                                    name="grid-type" value="adaptive" id="adaptive" checked>
-                                <label class="filter__grid-label filter__label" for="adaptive">Адаптивная</label>
-                            </li>
-                            <li class="filter__grid-item filter__item">
-                                <input class="visually-hidden filter__grid-radio filter__input" type="radio"
-                                    name="grid-type" value="fixed" id="fixed" disabled>
-                                <label class="filter__grid-label filter__label" for="fixed">Фиксированная</label>
-                            </li>
-                            <li class="filter__grid-item filter__item">
-                                <input class="visually-hidden filter__grid-radio filter__input" type="radio"
-                                    name="grid-type" value="rubber" id="rubber">
-                                <label class="filter__grid-label filter__label" for="rubber">Резиновая</label>
-                            </li>
-                        </ul>
-                    </fieldset>
-                    <fieldset class="filter__feature fieldset">
-                        <legend class="filter__feature-title filter__title">Особенности:</legend>
-                        <ul class="filter__feature-list filter__list">
-                            <li class="filter__feature-item filter__item">
-                                <input class="visually-hidden filter__feature-checkbox filter__input" type="checkbox"
-                                    name="slider" id="slider" checked disabled>
-                                <label class="filter__feature-label filter__label" for="slider">Слайдер</label>
-                            </li>
-                            <li class="filter__feature-item filter__item">
-                                <input class="visually-hidden filter__feature-checkbox filter__input" type="checkbox"
-                                    name="advantages" id="advantages" disabled>
-                                <label class="filter__feature-label filter__label" for="advantages">Блок
-                                    преимуществ</label>
-                            </li>
-                            <li class="filter__feature-item filter__item">
-                                <input class="visually-hidden filter__feature-checkbox filter__input" type="checkbox"
-                                    name="news" id="news" checked>
-                                <label class="filter__feature-label filter__label" for="news">Новости</label>
-                            </li>
-                            <li class="filter__feature-item filter__item">
-                                <input class="visually-hidden filter__feature-checkbox filter__input" type="checkbox"
-                                    name="gallery" id="gallery">
-                                <label class="filter__feature-label filter__label" for="gallery">Галерея</label>
-                            </li>
-                            <li class="filter__feature-item filter__item">
-                                <input class="visually-hidden filter__feature-checkbox filter__input" type="checkbox"
-                                    name="basket" id="basket">
-                                <label class="filter__feature-label filter__label" for="basket">Корзина</label>
-                            </li>
-                        </ul>
-                    </fieldset>
-                    <button class="filter__button button">Показать</button>
-                </form>
-            </aside>
             <div class="catalog__wrap-right">
                 <header class="sort">
                     <p class="sort__title">Сортировать:</p>
@@ -226,51 +147,104 @@
                             href="#">Следующая</a></li>
                 </ul>
             </div>
+            <aside class="filter">
+                <form class="filter__form" method="get" action="https://echo.htmlacademy.ru">
+                    <fieldset class="filter__price fieldset">
+                        <legend class="filter__price-title filter__title">Стоимость:</legend>
+                        <div class="filter__price-block">
+                            <div class="filter__price-range">
+                                <div class="filter__price-selected">
+                                    <button class="filter__price-level filter__price-lever-one" type="button"></button>
+                                    <button class="filter__price-level filter__price-lever-two" type="button"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter__price-span">
+                            <p class="filter__price-start">
+                                <label class="filter__price-label" for="start">От</label>
+                                <input class="filter__price-text" type="text" id="start" placeholder="0"
+                                    name="price-start">
+                            </p>
+                            <p class="filter__price-finish">
+                                <label class="filter__price-label" for="finish">До</label>
+                                <input class="filter__price-text" type="text" id="finish" placeholder="15 000"
+                                    name="price-finish">
+                            </p>
+                        </div>
+                    </fieldset>
+                    <fieldset class="filter__grid fieldset">
+                        <legend class="filter__grid-title filter__title">Сетка:</legend>
+                        <ul class="filter__grid-list filter__list">
+                            <li class="filter__grid-item filter__item">
+                                <input class="visually-hidden filter__grid-radio filter__input" type="radio"
+                                    name="grid-type" value="adaptive" id="adaptive" checked>
+                                <label class="filter__grid-label filter__label" for="adaptive">Адаптивная</label>
+                            </li>
+                            <li class="filter__grid-item filter__item">
+                                <input class="visually-hidden filter__grid-radio filter__input" type="radio"
+                                    name="grid-type" value="fixed" id="fixed" disabled>
+                                <label class="filter__grid-label filter__label" for="fixed">Фиксированная</label>
+                            </li>
+                            <li class="filter__grid-item filter__item">
+                                <input class="visually-hidden filter__grid-radio filter__input" type="radio"
+                                    name="grid-type" value="rubber" id="rubber">
+                                <label class="filter__grid-label filter__label" for="rubber">Резиновая</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <fieldset class="filter__feature fieldset">
+                        <legend class="filter__feature-title filter__title">Особенности:</legend>
+                        <ul class="filter__feature-list filter__list">
+                            <li class="filter__feature-item filter__item">
+                                <input class="visually-hidden filter__feature-checkbox filter__input" type="checkbox"
+                                    name="slider" id="slider" checked disabled>
+                                <label class="filter__feature-label filter__label" for="slider">Слайдер</label>
+                            </li>
+                            <li class="filter__feature-item filter__item">
+                                <input class="visually-hidden filter__feature-checkbox filter__input" type="checkbox"
+                                    name="advantages" id="advantages" disabled>
+                                <label class="filter__feature-label filter__label" for="advantages">Блок
+                                    преимуществ</label>
+                            </li>
+                            <li class="filter__feature-item filter__item">
+                                <input class="visually-hidden filter__feature-checkbox filter__input" type="checkbox"
+                                    name="news" id="news" checked>
+                                <label class="filter__feature-label filter__label" for="news">Новости</label>
+                            </li>
+                            <li class="filter__feature-item filter__item">
+                                <input class="visually-hidden filter__feature-checkbox filter__input" type="checkbox"
+                                    name="gallery" id="gallery">
+                                <label class="filter__feature-label filter__label" for="gallery">Галерея</label>
+                            </li>
+                            <li class="filter__feature-item filter__item">
+                                <input class="visually-hidden filter__feature-checkbox filter__input" type="checkbox"
+                                    name="basket" id="basket">
+                                <label class="filter__feature-label filter__label" for="basket">Корзина</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <button class="filter__button button">Показать</button>
+                </form>
+            </aside>
         </section>
     </main>
     <footer class="main-footer">
         <section class="map">
-            <img class="location" src="img/map.jpg" alt="Адрес компании: Санкт-Петербург, ул. Б. Конюшенная, д. 19/8"
-                width="1440" height="416">
-            <div class="write-us">
-                <address class="write-us__address">
-                    <p class="write-us__title">NЁRDS DESIGN STUDIO</p>
-                    <p class="write-us__contacts">
-                        191186, Санкт-Петербург,<br>
-                        ул. Б. Конюшенная, д. 19/8<br>
-                    </p>
-                    <p class="write-us__phone">
-                        <a class="write-us__phone-link" href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
-                    </p>
-                </address>
-                <a class="write-us__link button" href="">Напишите нам</a>
-            </div>
-            <section class="modal-feedback">
-                <h2 class="modal-feedback__title">Напишите нам</h2>
-                <button class="modal-feedback__close">
-                    <span class="visually-hidden">Закрыть</span>
-                </button>
-                <form class="modal-feedback__form" action="https://echo.htmlacademy.ru" method="post">
-                    <div class="modal-feedback__user">
-                        <p class="modal-feedback__user-name">
-                            <label class="modal-feedback__label" for="user-name">Ваше имя:</label>
-                            <input class="modal-feedback__name-input input" id="user-name" type="text" name="name"
-                                placeholder="Имя Фамилия">
-                        </p>
-                        <p class="modal-feedback__user-email">
-                            <label class="modal-feedback__label" for="user-email">Ваш e-mail:</label>
-                            <input class="modal-feedback__name-input input" id="user-email" type="text" name="email"
-                                placeholder="email@example.com">
-                        </p>
-                    </div>
-                    <p class="modal-feedback__text">
-                        <label class="modal-feedback__label" for="user-text">Текст письма:</label>
-                        <textarea class="modal-feedback__textarea textarea" id="user-text" name="text"
-                            placeholder="В свободной форме"></textarea>
-                    </p>
-                    <button class="modal-feedback__button button" type="submit">Отправить</button>
-                </form>
-            </section>
+            <iframe aria-label="Адрес компании: Санкт-Петербург, ул. Б. Конюшенная, д. 19/8" class="location"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533261!2d30.320858715892275!3d59.93871648187617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1552822293714"
+                frameborder="0" style="border:0" allowfullscreen>
+            </iframe>
+            <address class="write-us">
+                <p class="write-us__title">NЁRDS DESIGN STUDIO</p>
+                <p class="write-us__contacts">
+                    191186, Санкт-Петербург,
+                    ул. Б. Конюшенная, д. 19/8
+                </p>
+                <p class="write-us__phone">
+                    <a class="write-us__phone-link" href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
+                </p>
+                <a class="write-us__link button" href="feedback.html">Напишите нам</a>
+            </address>
         </section>
         <div class="main-footer__info container">
             <ul class="social-list">
@@ -313,6 +287,32 @@
             </p>
         </div>
     </footer>
+    <section class="modal-feedback">
+        <h2 class="modal-feedback__title">Напишите нам</h2>
+        <button class="modal-feedback__close">
+            <span class="visually-hidden">Закрыть</span>
+        </button>
+        <form class="modal-feedback__form" action="https://echo.htmlacademy.ru" method="post">
+            <div class="modal-feedback__user">
+                <p class="modal-feedback__user-name">
+                    <label class="modal-feedback__label" for="user-name">Ваше имя:</label>
+                    <input class="modal-feedback__name-input input" id="user-name" type="text" name="name"
+                        placeholder="Имя Фамилия">
+                </p>
+                <p class="modal-feedback__user-email">
+                    <label class="modal-feedback__label" for="user-email">Ваш e-mail:</label>
+                    <input class="modal-feedback__name-input input" id="user-email" type="text" name="email"
+                        placeholder="email@example.com">
+                </p>
+            </div>
+            <p class="modal-feedback__text">
+                <label class="modal-feedback__label" for="user-text">Текст письма:</label>
+                <textarea class="modal-feedback__textarea textarea" id="user-text" name="text"
+                    placeholder="В свободной форме"></textarea>
+            </p>
+            <button class="modal-feedback__button button" type="submit">Отправить</button>
+        </form>
+    </section>
 </body>
 
 </html>

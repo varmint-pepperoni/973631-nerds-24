@@ -11,14 +11,13 @@ body {
 }
 
 .visually-hidden {
-    position: absolute !important;
+    position: absolute;
     clip: rect(1px 1px 1px 1px);
-    /* IE6, IE7 */
     clip: rect(1px, 1px, 1px, 1px);
-    padding: 0 !important;
-    border: 0 !important;
-    height: 1px !important;
-    width: 1px !important;
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
     overflow: hidden;
 }
 
@@ -80,6 +79,7 @@ a {
     display: inline-block;
     cursor: pointer;
     word-break: break-all;
+    vertical-align: middle;
 }
 
 .button:hover, .button:focus {
@@ -126,6 +126,7 @@ a {
     padding: 0;
     width: 658px;
     padding-top: 27px;
+    flex-wrap: wrap;
 }
 
 .main-navigation__item {
@@ -143,6 +144,7 @@ a {
 
 .main-navigation__link, .shop-basket {
     color: #000000;
+    word-break: break-all;
 }
 
 .main-navigation__link:hover, .main-navigation__link:focus, .shop-basket:hover, .shop-basket:focus {
@@ -168,6 +170,7 @@ a {
     display: inline-block;
     position: relative;
     padding-left: 41px;
+    vertical-align: top;
 }
 
 .shop-basket::before {
@@ -226,6 +229,7 @@ a {
 .slider__title {
     margin-top: 0;
     margin-bottom: 26px;
+    width: 540px;
 }
 
 .slider__text {
@@ -254,11 +258,11 @@ a {
     list-style: none;
     position: absolute;
     display: flex;
-    justify-content: center;
     padding: 0;
     margin: 0;
-    width: 100%;
-    bottom: 96px;
+    bottom: 90px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .slider__switch-item {
@@ -301,6 +305,7 @@ a {
     display: flex;
     padding: 0;
     margin: 0;
+    flex-wrap: wrap;
 }
 
 .services__item {
@@ -309,8 +314,12 @@ a {
     padding-top: 171px;
 }
 
-.services__item:last-child {
+.services__item:nth-child(3n) {
     margin-right: 0;
+}
+
+.services__item:nth-child(n+4) {
+    margin-top: 40px;
 }
 
 .services__item_theme_sites {
@@ -486,13 +495,18 @@ a {
 .partners__list {
     list-style: none;
     display: flex;
-    justify-content: space-between;
     padding: 0;
     margin: 0;
+    flex-wrap: wrap;
 }
 
 .partners__item {
     position: relative;
+    margin-right: 40px;
+}
+
+.partners__item:nth-child(4n) {
+    margin-right: 0;
 }
 
 .partners__item::after {
@@ -505,7 +519,7 @@ a {
     top: 64px;
 }
 
-.partners__item:last-child::after {
+.partners__item:last-child::after, .partners__item:nth-child(4n)::after {
     display: none;
 }
 
@@ -528,14 +542,12 @@ a {
 
 .map {
     position: relative;
-    width: 100%;
 }
 
 .location {
     height: 416px;
+    width: 100%;
     display: block;
-    /* IE 11 не поддерживает это свойство. Как быть? */
-    object-fit: cover;
 }
 
 .write-us {
@@ -547,9 +559,6 @@ a {
     left: 50%;
     margin-left: -580px;
     box-sizing: border-box;
-}
-
-.write-us__address {
     font-style: normal;
 }
 
@@ -593,7 +602,6 @@ a {
 .main-footer__sale-title {
     font-size: 36px;
     line-height: 36px;
-    font-weight: 700;
     color: #000000;
 }
 
@@ -610,10 +618,10 @@ a {
     padding-left: 100px;
     padding-bottom: 84px;
     box-sizing: border-box;
-    position: absolute;
+    position: fixed;
     left: 50%;
     margin-left: -480px;
-    top: -130px;
+    top: 50px;
     background-color: #ffffff;
 }
 
@@ -693,7 +701,7 @@ a {
 .page-title {
     text-align: center;
     padding: 0;
-    padding-top: 78px;
+    padding-top: 79px;
     padding-bottom: 108px;
     margin: 0;
     background-color: #eeeeee;
@@ -846,14 +854,15 @@ a {
     background-repeat: no-repeat;
     background-color: transparent;
     border: none;
+    cursor: pointer;
 }
 
 .filter__price-lever-one {
-    left: -8px;
+    left: 0px;
 }
 
 .filter__price-lever-two {
-    right: -3px;
+    right: 0px;
 }
 
 .filter__price-start {
@@ -887,6 +896,7 @@ a {
     padding: 0;
     text-align: center;
     border-radius: 2px;
+    color: #283136;
 }
 
 .filter__grid-title {
@@ -923,7 +933,7 @@ a {
     border-radius: 50%;
     border: 4px solid #a6a6a6;
     box-sizing: border-box;
-    display: inline-block;
+    display: block;
     position: absolute;
     left: 1px;
     top: -3px
@@ -935,7 +945,7 @@ a {
     height: 9px;
     background-color: #a6a6a6;
     box-sizing: border-box;
-    display: inline-block;
+    display: block;
     position: absolute;
     left: 9px;
     border-radius: 50%;
@@ -1008,7 +1018,7 @@ a {
     height: 23px;
     background-image: url(../img/checkbox-off.svg);
     box-sizing: border-box;
-    display: inline-block;
+    display: block;
     position: absolute;
     left: 1px;
     top: -2px;
@@ -1063,6 +1073,7 @@ a {
 
 .catalog__wrap-right {
     width: 760px;
+    order: 1;
 }
 
 .catalog-list {
@@ -1113,14 +1124,14 @@ a {
     bottom: 0;
     padding: 27px 60px 43px;
     box-sizing: border-box;
-    display: none;
+    z-index: -1;
 }
 
-.product:hover .product__desc {
-    display: block;
+.product:hover .product__desc, .product:focus-within .product__desc {
+    z-index: 0;
 }
 
-.product:hover::before {
+.product:hover::before, .product:focus-within::before {
     opacity: 1;
 }
 
@@ -1145,6 +1156,8 @@ a {
     margin: 0;
     text-overflow: ellipsis;
     margin-bottom: 30px;
+    max-height: 150px;
+    overflow-y: auto;
 }
 
 .product__desc-button {
@@ -1163,6 +1176,7 @@ a {
     padding: 0;
     display: flex;
     padding-bottom: 60px;
+    flex-wrap: wrap;
 }
 
 .pagination-list__item {
@@ -1223,10 +1237,21 @@ a {
     padding: 0;
     margin: 0;
     padding-top: 69px;
-    width: 260px;
-    justify-content: space-between;
+    width: 261px;
     flex-wrap: wrap;
-    margin-right: 139px;
+    margin-right: 138px;
+}
+
+.social-list__item {
+    margin-right: 12px;
+}
+
+.social-list__item:nth-child(3n) {
+    margin-right: 0;
+}
+
+.social-list__item:nth-child(n+4) {
+    margin-top: 12px;
 }
 
 .social-list__link {
