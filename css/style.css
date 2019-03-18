@@ -110,7 +110,7 @@ a {
     background-color: #e74246;
 }
 
-.button:active {
+.button:not(.button_gray-active):active {
     color: rgba(255, 255, 255, 0.3);
     -webkit-box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
             box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
@@ -182,7 +182,8 @@ a {
 }
 
 .main-navigation__link:active, .shop-basket:active {
-    color: #e1e1e1;
+    color: rgba(0, 0, 0, 0.3);
+
 }
 
 .main-navigation__item_active .main-navigation__link {
@@ -1140,11 +1141,13 @@ a {
     background-color: #dfdfdf;
 }
 
-.button_gray:active {
+.button_gray:not(.button_gray-active):active {
     color: #a9a9a9;
     -webkit-box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
             box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
     background-color: #d5d5d5;
+    border: none;
+    padding: 16px 21px;
 }
 
 .catalog {
@@ -1218,6 +1221,10 @@ a {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     z-index: -1;
+}
+
+.product:hover {
+    box-shadow: 0px 6px 15px 0 rgba(0, 1, 1, 0.25);
 }
 
 .product:hover .product__desc, .product:focus-within .product__desc {
@@ -1308,19 +1315,20 @@ a {
     border-color: #dfdfdf;
 }
 
-.button_gray:active {
+/* .button_gray:active {
     color: #a9a9a9;
     -webkit-box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
             box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
     background-color: #d5d5d5;
     border-color: #d5d5d5;
-}
+} */
 
 .button_gray-active, .button_gray-active:hover, .button_gray-active:focus, .button_gray-active:active {
     background-color: transparent;
     border: 3px solid #dbdbdb;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
+            cursor: default;
 }
 
 .main-footer {
