@@ -929,6 +929,7 @@ a {
     background-color: transparent;
     border: none;
     cursor: pointer;
+    top: -11px;
 }
 
 .filter__price-lever-one {
@@ -1227,11 +1228,19 @@ a {
     box-shadow: 0px 6px 15px 0 rgba(0, 1, 1, 0.25);
 }
 
-.product:hover .product__desc, .product:focus-within .product__desc {
+.product:hover .product__desc {
     z-index: 0;
 }
 
-.product:hover::before, .product:focus-within::before {
+.product:focus-within .product__desc {
+    z-index: 0;
+}
+
+.product:hover::before {
+    opacity: 1;
+}
+
+.product:focus-within::before {
     opacity: 1;
 }
 
