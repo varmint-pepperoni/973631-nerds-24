@@ -785,6 +785,8 @@ a {
     margin: 0;
     padding: 0;
     margin-left: auto;
+    flex-wrap: wrap;
+    padding-left: 20px;
 }
 
 .sort__title, .filter__title {
@@ -1174,9 +1176,6 @@ a {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
     margin: 0;
     padding: 0;
     margin-bottom: 28px;
