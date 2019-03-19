@@ -136,7 +136,8 @@
     </main>
     <footer class="main-footer">
         <section class="map">
-            <img class="location-img" src="img/map.jpg" alt="Адрес компании: Санкт-Петербург, ул. Б. Конюшенная, д. 19/8" width="1440" height="416">
+            <img class="location-img" src="img/map.jpg"
+                alt="Адрес компании: Санкт-Петербург, ул. Б. Конюшенная, д. 19/8" width="1440" height="416">
             <iframe aria-label="Адрес компании: Санкт-Петербург, ул. Б. Конюшенная, д. 19/8" class="location"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533261!2d30.320858715892275!3d59.93871648187617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1552822293714"
                 allowfullscreen>
@@ -220,6 +221,70 @@
             <button class="modal-feedback__button button" type="submit">Отправить</button>
         </form>
     </section>
+    <script type="text/javascript">
+        var modal = document.querySelector(".modal-feedback");
+        var openButton = document.querySelector(".write-us__link");
+        var closeButton = modal.querySelector(".modal-feedback__close");
+        var fullname = modal.querySelector("[name=name]");
+        var form = document.querySelector(".modal-feedback__form");
+        var email = modal.querySelector("[name=email]");
+        var text = modal.querySelector("[name=text]");
+
+        openButton.addEventListener("click", function (event) {
+            event.preventDefault();
+            modal.classList.add("modal-feedback_show");
+            fullname.focus();
+        });
+
+        closeButton.addEventListener("click", function (event) {
+            event.preventDefault();
+            modal.classList.remove("modal-feedback_show");
+            modal.classList.remove("modal-feedback_error");
+            modal.classList.add("modal-feedback");
+        });
+
+
+        form.addEventListener("submit", function (event) {
+            if (!fullname.value || !email.value || !text.value) {
+                event.preventDefault();
+                modal.classList.remove("modal-feedback_error");
+                modal.offsetWidth = modal.offsetWidth;
+                modal.classList.add("modal-feedback_error");
+            }
+            if (!fullname.value) {
+                fullname.classList.add("modal-feedback_wrong");
+            }
+            if (!email.value) {
+                email.classList.add("modal-feedback_wrong");
+            }
+            if (!text.value) {
+                text.classList.add("modal-feedback_wrong");
+            }
+        });
+
+        fullname.addEventListener("input", function () {
+            fullname.classList.remove("modal-feedback_wrong");
+        });
+
+        email.addEventListener("input", function () {
+            email.classList.remove("modal-feedback_wrong");
+        });
+
+        text.addEventListener("input", function () {
+            text.classList.remove("modal-feedback_wrong");
+        });
+
+        window.addEventListener("keydown", function (event) {
+            if (event.keyCode === 27) {
+                event.preventDefault();
+
+                if (modal.classList.contains("modal-feedback_show")) {
+                    modal.classList.remove("modal-feedback_show");
+                    modal.classList.remove("modal-feedback_error");
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>
