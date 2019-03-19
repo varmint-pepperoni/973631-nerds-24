@@ -1,7 +1,7 @@
 "use strict";
 
 // Слайдер
-(function() {
+(function () {
     var slider = document.querySelector(".slider");
 
     if (!slider) {
@@ -37,68 +37,68 @@
 })();
 
 // Модальное окно
-(function() {
+(function () {
     var modal = document.querySelector(".modal-feedback");
-var openButton = document.querySelector(".write-us__link");
-var closeButton = modal.querySelector(".modal-feedback__close");
-var fullname = modal.querySelector("[name=name]");
-var form = document.querySelector(".modal-feedback__form");
-var email = modal.querySelector("[name=email]");
-var text = modal.querySelector("[name=text]");
+    var openButton = document.querySelector(".write-us__link");
+    var closeButton = modal.querySelector(".modal-feedback__close");
+    var fullname = modal.querySelector("[name=name]");
+    var form = document.querySelector(".modal-feedback__form");
+    var email = modal.querySelector("[name=email]");
+    var text = modal.querySelector("[name=text]");
 
-openButton.addEventListener("click", function (event) {
-    event.preventDefault();
-    modal.classList.add("modal-feedback_show");
-    fullname.focus();
-});
-
-closeButton.addEventListener("click", function (event) {
-    event.preventDefault();
-    modal.classList.remove("modal-feedback_show");
-    modal.classList.remove("modal-feedback_error");
-    modal.classList.add("modal-feedback");
-});
-
-
-form.addEventListener("submit", function (event) {
-    if (!fullname.value || !email.value || !text.value) {
+    openButton.addEventListener("click", function (event) {
         event.preventDefault();
+        modal.classList.add("modal-feedback_show");
+        fullname.focus();
+    });
+
+    closeButton.addEventListener("click", function (event) {
+        event.preventDefault();
+        modal.classList.remove("modal-feedback_show");
         modal.classList.remove("modal-feedback_error");
-        modal.offsetWidth = modal.offsetWidth;
-        modal.classList.add("modal-feedback_error");
-    }
-    if (!fullname.value) {
-        fullname.classList.add("modal-feedback_wrong");
-    }
-    if (!email.value) {
-        email.classList.add("modal-feedback_wrong");
-    }
-    if (!text.value) {
-        text.classList.add("modal-feedback_wrong");
-    }
-});
+        modal.classList.add("modal-feedback");
+    });
 
-fullname.addEventListener("input", function () {
-    fullname.classList.remove("modal-feedback_wrong");
-});
 
-email.addEventListener("input", function () {
-    email.classList.remove("modal-feedback_wrong");
-});
-
-text.addEventListener("input", function () {
-    text.classList.remove("modal-feedback_wrong");
-});
-
-window.addEventListener("keydown", function (event) {
-    if (event.keyCode === 27) {
-        event.preventDefault();
-
-        if (modal.classList.contains("modal-feedback_show")) {
-            modal.classList.remove("modal-feedback_show");
+    form.addEventListener("submit", function (event) {
+        if (!fullname.value || !email.value || !text.value) {
+            event.preventDefault();
             modal.classList.remove("modal-feedback_error");
+            modal.offsetWidth = modal.offsetWidth;
+            modal.classList.add("modal-feedback_error");
         }
-    }
-});
+        if (!fullname.value) {
+            fullname.classList.add("modal-feedback_wrong");
+        }
+        if (!email.value) {
+            email.classList.add("modal-feedback_wrong");
+        }
+        if (!text.value) {
+            text.classList.add("modal-feedback_wrong");
+        }
+    });
+
+    fullname.addEventListener("input", function () {
+        fullname.classList.remove("modal-feedback_wrong");
+    });
+
+    email.addEventListener("input", function () {
+        email.classList.remove("modal-feedback_wrong");
+    });
+
+    text.addEventListener("input", function () {
+        text.classList.remove("modal-feedback_wrong");
+    });
+
+    window.addEventListener("keydown", function (event) {
+        if (event.keyCode === 27) {
+            event.preventDefault();
+
+            if (modal.classList.contains("modal-feedback_show")) {
+                modal.classList.remove("modal-feedback_show");
+                modal.classList.remove("modal-feedback_error");
+            }
+        }
+    });
 })();
 
