@@ -64,7 +64,7 @@
         if (!fullname.value || !email.value || !text.value) {
             event.preventDefault();
             modal.classList.remove("modal-feedback_error");
-            modal.offsetWidth = modal.offsetWidth;
+            modal.offsetWidth;
             modal.classList.add("modal-feedback_error");
         }
         if (!fullname.value) {
